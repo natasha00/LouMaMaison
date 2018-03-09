@@ -261,7 +261,7 @@
                                         <div class="row">
                                             <div id="selectImage" class="col-md-8">
                                                 <div id="ajoutImage text-left">
-                                                    <label id="inputFile"><input type="file" name="file[]" id="file" required /></label>
+                                                    <label id="" class="btn btn-primary btn-sm"> Sélectionner<input type="file" name="file[]" id="file" required /></label>
                                                 </div>
                                                 <input type="hidden" name="action" value="ajouterPhoto" required />
                                             </div>
