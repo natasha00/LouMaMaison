@@ -254,7 +254,7 @@
                                     <div class="panel-footer">
                                         <div id="selectImage">
                                             <div id="ajoutImage">
-                                                <label id="inputFile"><input type="file" name="file[]" id="file" required /></label>
+                                                <label id="inputFile" class="btn btn-primary">Sélectionner une image<input type="file" name="file[]" id="file" required /></label>
                                             </div>
                                             <input type="hidden" name="action" value="ajouterPhoto" required />
                                         </div>
