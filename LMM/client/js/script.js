@@ -3,7 +3,6 @@ $(document).ready(function() {
     /*chercher les apparts avec les filtres remplis*/
 
     $( "#filtrer" ).on( "click", function( e ) {
-    	console.log("allo");
         event.preventDefault();
         var url = $('#formFiltrer').serialize();
         filtrerAppart(url);
@@ -333,6 +332,9 @@ $(document).ready(function() {
 	*/
 		$(document).on('click', '.refuserReservation', function(e){
 			var idLocation = $(this).val();
+            var id_userClient = $('#username').attr('name');
+            var objetClient = "Refus de location";
+            var texteClient = "Votre demande de location viens d'être refusée !";
 			$.ajax({
 				method: "GET",
 				url: "index.php?Appartements&action=refuserDemande&idLocation="+idLocation,
@@ -343,7 +345,8 @@ $(document).ready(function() {
 					}
 					else if(reponse.messageSucces)
 					{
-						 setTimeout(function(){$('#demandesReservations').click();}, 1500)
+						ecrireMessage(id_userClient, objetClient, texteClient); 
+                        setTimeout(function(){$('#demandesReservations').click();}, 1500)
 						 $("#erreur_demande").empty().addClass("alert alert-success").html(reponse.messageSucces);
 					}
 				},
@@ -358,6 +361,9 @@ $(document).ready(function() {
 	*/
 		$(document).on('click', '.annulerReservation', function(e){
 			var idLocation = $(this).val();
+            var id_userClient = $('#username').attr('name');
+            var objetClient = "annulation d'approbation";
+            var texteClient = "Votre demande de location viens d'être désapprouvée pour defaut de paiement !";
 			$.ajax({
 				method: "GET",
 				url: "index.php?Appartements&action=annulerDemande&idLocation="+idLocation,
@@ -368,8 +374,9 @@ $(document).ready(function() {
 					}
 					else if(reponse.messageSucces)
 					{
-						 setTimeout(function(){$('#demandesReservations').click();}, 1500)
-						 $("#erreur_demande").empty().addClass("alert alert-success").html(reponse.messageSucces);
+                        ecrireMessage(id_userClient, objetClient, texteClient);
+                        setTimeout(function(){$('#demandesReservations').click();}, 1500)
+                        $("#erreur_demande").empty().addClass("alert alert-success").html(reponse.messageSucces);
 					}
 				},
 				error: function(xhr, ajaxOptions, thrownError) {
@@ -988,4 +995,24 @@ function CalculerdonneePaiement(idLocation){
         alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
       }
     });
+}
+
+/* fonction pour selectionner un nombre d'étoiles pour la recherche par note*/
+
+window.onload=function(){
+  $(function () {
+
+        $(".rateyo").rateYo();
+
+        $(".rateyo-readonly-widg").rateYo({
+
+          rating: 1,
+          numStars: 5,
+          precision: 0,
+          minValue: 1,
+          maxValue: 10
+        }).on("rateyo.change", function (e, data) {
+            $('#laNote').val(data.rating);
+        });
+  });
 }
