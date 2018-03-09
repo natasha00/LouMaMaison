@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 09, 2018 at 01:58 AM
+-- Generation Time: Mar 09, 2018 at 03:41 AM
 -- Server version: 5.6.35
 -- PHP Version: 7.1.8
 
@@ -46,24 +46,14 @@ CREATE TABLE `appartement` (
 --
 
 INSERT INTO `appartement` (`id`, `actif`, `options`, `titre`, `descriptif`, `montantParJour`, `nbPersonnes`, `nbLits`, `nbChambres`, `photoPrincipale`, `noApt`, `noCivique`, `rue`, `ville`, `codePostal`, `id_typeApt`, `id_userProprio`, `id_nomQuartier`) VALUES
-(1, 1, 'wifi=checked&cintres=checked', 'maison de bois', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 200, 2, 1, 1, './images/profil.png', '4', 11969, 'rolland', 'Montréal', 'H1G 3V9', 1, 'nat', 1),
-(2, 1, 'wifi=checked&cintres=checked', 'maison en brique', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 50, 5, 2, 2, './images/profil.png', '300', 2030, 'Pie IX', 'Montréal', 'H1G 3V9', 2, 'yul', 4),
-(3, 1, 'wifi=checked&cintres=checked', 'maison en paille', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 50, 2, 1, 6, './images/profil.png', '4', 11979, 'rolland', 'Montréal', 'H1G 3V9', 1, 'nat', 3),
-(4, 1, 'wifi=checked&cintres=checked', 'maison en carton', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 100, 5, 6, 1, './images/profil.png', '302', 2030, 'bélanger', 'Montréal', 'H1G 3V9', 2, 'yul', 2),
-(5, 1, 'wifi=checked&cintres=checked', 'maison de bois 2', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 200, 2, 1, 1, './images/profil.png', '4', 2030, 'bellechasse', 'Montréal', 'H1G 3V9', 1, 'nat', 1),
-(6, 1, 'wifi=checked&cintres=checked', 'maison en brique 2', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 50, 5, 2, 2, './images/profil.png', '300', 4218, 'rudy', 'Montréal', 'H1G 3V9', 2, 'yul', 4),
-(7, 1, 'wifi=checked&cintres=checked', 'maison en paille 2', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 50, 2, 1, 6, './images/profil.png', '4', 11979, 'rolland', 'Montréal', 'H1G 3V9', 1, 'nat', 3),
-(8, 1, 'wifi=checked&cintres=checked', 'maison en carton 2', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 100, 5, 6, 1, './images/profil.png', '302', 11960, 'rolland', 'Montréal', 'H1G 3V9', 2, 'yul', 2),
-(9, 1, 'wifi=checked&cintres=checked', 'maison de bois 3', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 200, 2, 1, 1, './images/profil.png', '4', 11969, 'rolland', 'Montréal', 'H1G 3V9', 1, 'nat', 1),
-(10, 1, 'wifi=checked&cintres=checked', 'maison en brique 3', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 50, 5, 2, 2, './images/profil.png', '300', 11970, 'Pie IX', 'Montréal', 'H1G 3V9', 2, 'yul', 4),
-(11, 1, 'wifi=checked&cintres=checked', 'maison en paille 3', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 50, 2, 1, 6, './images/profil.png', '4', 11979, 'rolland', 'Montréal', 'H1G 3V9', 1, 'nat', 3),
-(12, 1, 'wifi=checked&cintres=checked', 'maison en carton 3', 'description de l\'appartement bbbbabbabbababab ffff arrararara ssss.', 100, 5, 6, 1, './images/profil.png', '302', 11960, 'rolland', 'Montréal', 'H1G 3V9', 2, 'yul', 2),
-(13, 1, 'wifi=checked&cintres=checked&fer+%C3%A0+repasser=checked', 'Le titre mmmmm', 'oooooo ooooo oo o ', 50, 2, 1, 1, './images/profil.png', NULL, 1025, 'DeBellechasse', 'Montréal', 'H2S1Y4', 1, 'salim', 14),
-(14, 1, NULL, 'TTTTTTTTTT', 'oooooo ooo oo o o ', 70, 2, 1, 1, './images/profil.png', NULL, 32, 'Beaubien', 'Montréal', 'h2h2h2', 3, 'nat', 17),
-(15, 1, 'Options-Associées', 'Superbe Loft disponible', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 123, 4, 2, 1, './images/apt01-01.png', '501', 51, 'St-Paul', 'Montréal', 'G1Q 1Q9', 1, 'renaud', 7),
-(16, 1, 'Options-Associées', 'Merveilleux Condo', 'Nunc luctus enim ligula, a tincidunt nunc ultricies eget.', 98, 2, 1, 1, './images/apt02-01.png', '201', 781, 'Rue de la Commune', 'Montréal', 'H2G 3P5', 3, 'nat', 7),
-(17, 1, 'Options-Associées', 'Loft affordant', 'Nam tincidunt ex turpis, in molestie ipsum pretium sed.', 87, 4, 2, 2, './images/apt03-01.png', '32', 448, 'Place Jacques-Cartier', 'Montréal', 'H1G 4L8', 1, 'yul', 7),
-(18, 1, 'Options-Associées', 'Magnifique Condo', 'Quisque finibus, odio ac congue malesuada, mi lectus tempus mi, in condimentum sem justo feugiat lorem.', 63, 4, 2, 2, './images/apt04-01.png', '107', 3745, 'Rue Masson', 'Montréal', 'H1G 4L8', 1, 'salim', 14);
+(14, 1, '1=checked&2=checked', 'Chambre chalereuse', 'Chambre chaleureuse dans un appartement tranquille situé dans un quartier qui vous fera vivre le rythme montréalais avec sa vitalité et son confort simple. Parfait pour arriver en douceur à Montréal dans un endroit sympathique.', 70, 2, 1, 1, './images/profil.png', NULL, 6530, 'Beaubien', 'Montréal', 'H1M 3V8', 4, 'nat', 9),
+(15, 1, '7=checked&10=checked', 'Sur le bord de Vieux Port', 'C’est l’endroit où vous voulez habiter dans le vieux port, c’est parfait comme base pour découvrir Montréal, à côté d’excellents restaurants et cafés partout, galeries d’art, boutiques, spa, gym', 123, 4, 2, 1, './images/apt01-01.png', '501', 5304, 'Av du Parc', 'Montréal', 'H2V 4G7', 1, 'renaud', 6),
+(16, 1, '3=checked&6=checked', 'Merveilleux Condo', 'Particularité de ce lieu, c\'est d’être au cœur du quartier historique et d\'avoir la chance d\'explorer a pied les charmantes petites rues où tout est proche et l\'avantage de pouvoir sortir de ce quartier en voiture facilement, les entrées d’autoroute souterraine sont très accessibles', 98, 2, 1, 1, './images/apt02-01.png', '201', 781, 'Rue de la Commune', 'Montréal', 'H2Y 4A2', 3, 'nat', 7),
+(17, 1, '4=checked', 'Loft affordant', 'Europa Place d’Armes est un immeuble haut-de-gamme, situé au coeur du Vieux-Montréal, tout juste en face du Palais des congrès, de la Basilique Notre-Dame et du métro.', 87, 4, 2, 2, './images/apt03-01.png', '32', 55, 'Rue Saint-Jacques Ouest', 'Montréal', 'H2Y 1K9', 1, 'salim', 7),
+(18, 1, '2=checked&9=checked', 'Magnifique Condo', 'Quisque finibus, odio ac congue malesuada, mi lectus tempus mi, in condimentum sem justo feugiat lorem.', 63, 4, 2, 2, './images/apt04-01.png', '107', 3745, 'Rue Masson', 'Montréal', ' H1X 1S7', 1, 'salim', 14),
+(19, 1, '3=checked&8=checked', 'Le Bijou', 'Magnifique appartement à Montréal', 90, 3, 2, 2, './images/apt01-03.png', '25', 6600, 'Jeanne-Mance', 'Montréal', 'H2V 4L2', 3, 'renaud', 11),
+(20, 1, '3=checked&6-checked', 'Luxurious condo - Old Montreal', 'Quartier touristique et animé! Beaucoup de restaurants et près de tout. A 5minutes du métro.', 85, 3, 2, 2, './images/apt02-07.png', '4', 1610, 'Préfontaine ', 'Montréal', 'H1W 2N8', 5, 'nat', 11),
+(21, 1, '1=checked&4=checked&5=checked&6=checked&7=checked&8=checked&11=checked&12=checked&13=checked&16=checked', 'Luxury Condo in Tour Des Canadiens! Amazing Views!', 'The condo in located in the well known building \"Tour Des Canadiens\" which opened in 2016. It\'s a luxury 50 story building with beautiful views of the city. The condo is one bedroom with a nice living room and kitchen.', 120, 4, 3, 3, './images/apt04-05.png', NULL, 1650, 'Aylwin', 'Montréal', 'H1W 3B8', 6, 'salim', 2);
 
 -- --------------------------------------------------------
 
@@ -108,8 +98,11 @@ INSERT INTO `disponibilite` (`id`, `dateDebut`, `dateFin`, `disponibilite`, `id_
 (25, '2018-03-05', '2018-03-31', 1, 18),
 (43, '2018-03-05', '2018-03-31', 1, 15),
 (44, '2018-03-06', '2018-03-31', 1, 14),
-(45, '2018-03-06', '2018-03-31', 1, 1),
-(49, '2018-03-10', '2018-03-31', 1, 16);
+(49, '2018-03-10', '2018-03-31', 1, 16),
+(52, '2018-03-08', '2018-03-31', 1, 17),
+(53, '2018-03-09', '2018-03-20', 1, 19),
+(54, '2018-03-10', '2018-03-30', 1, 20),
+(55, '2018-03-08', '2018-03-31', 1, 21);
 
 -- --------------------------------------------------------
 
@@ -131,13 +124,8 @@ CREATE TABLE `evaluation` (
 --
 
 INSERT INTO `evaluation` (`id`, `rating`, `commentaire`, `dateNotif`, `id_appartement`, `id_username`) VALUES
-(1, 10, NULL, '2018-02-28', 1, 'nat'),
 (2, 10, NULL, '2018-02-27', 18, 'renaud'),
-(3, 7, NULL, '2018-02-25', 2, 'salim'),
-(4, 1, NULL, '2018-02-28', 3, 'salim'),
 (5, 8, NULL, '2018-02-18', 17, 'renaud'),
-(6, 5, NULL, '2018-02-24', 4, 'yul'),
-(9, 4, NULL, '2018-02-23', 5, 'salim'),
 (10, 7, NULL, '2018-02-24', 15, 'renaud'),
 (11, 4, NULL, '2018-03-08', 18, 'yul'),
 (12, 5, NULL, '2018-03-08', 18, 'yul');
@@ -171,15 +159,14 @@ INSERT INTO `location` (`id`, `dateDebut`, `dateFin`, `valideParPrestataire`, `v
 (36, '2018-03-17', '2018-03-22', 0, 0, 'yul', 15, 2, 0, 43),
 (37, '2018-03-13', '2018-03-13', 0, 0, 'yul', 16, 1, 0, 49),
 (38, '2018-03-23', '2018-03-26', 0, 0, 'nat', 15, 3, 0, 43),
-(39, '2018-03-06', '2018-03-07', 0, 0, 'salim', 15, 1, 0, 43),
+(39, '2018-03-06', '2018-03-07', 1, 1, 'salim', 15, 1, 0, 43),
 (40, '2018-03-25', '2018-03-27', 0, 0, 'renaud', 15, 2, 0, 43),
 (43, '2018-03-17', '2018-03-20', 1, 0, 'renaud', 15, 2, 0, 43),
 (44, '2018-03-24', '2018-03-30', 0, 0, 'salim', 15, 1, 0, 43),
 (45, '2018-03-20', '2018-03-26', 0, 0, 'Nouveau00', 15, 1, 0, 43),
 (46, '2018-03-18', '2018-03-24', 0, 0, 'salim', 15, 2, 0, 43),
 (47, '2018-03-20', '2018-03-24', 0, 0, 'yul', 15, 2, 0, 43),
-(48, '2018-03-05', '2018-03-07', 1, 1, 'yul', 18, 2, 0, 25),
-(49, '2018-03-15', '2018-03-17', 0, 0, 'salim', 1, 2, 0, 45);
+(48, '2018-03-05', '2018-03-07', 1, 1, 'yul', 18, 2, 0, 25);
 
 -- --------------------------------------------------------
 
@@ -469,7 +456,8 @@ INSERT INTO `type_apt` (`id`, `typeApt`) VALUES
 (2, 'Chalet'),
 (3, 'Appartement'),
 (4, 'Chambre'),
-(5, 'Maison');
+(5, 'Maison'),
+(6, 'Condo');
 
 -- --------------------------------------------------------
 
@@ -616,7 +604,7 @@ ALTER TABLE `usager`
 -- AUTO_INCREMENT for table `appartement`
 --
 ALTER TABLE `appartement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `communication`
 --
@@ -626,7 +614,7 @@ ALTER TABLE `communication`
 -- AUTO_INCREMENT for table `disponibilite`
 --
 ALTER TABLE `disponibilite`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT for table `evaluation`
 --
@@ -666,7 +654,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `type_apt`
 --
 ALTER TABLE `type_apt`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Constraints for dumped tables
 --
