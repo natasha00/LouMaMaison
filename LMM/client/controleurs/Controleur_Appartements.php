@@ -40,7 +40,14 @@
                 {
           // case de gestion des filtres pour affichage des appartements
                     case "filtrer":
-                    
+                        if(isset($params['arrivee']) && !empty($params['arrivee']))
+                        {
+                            setcookie("arrivee", $params['arrivee']);
+                        }
+                        if(isset($params['depart']) && !empty($params['depart']))
+                        {
+                            setcookie("depart", $params['depart']);
+                        }
                         // numero de la page actuelle
                         $numPage = isset($params['page']) && is_numeric($params['page'])? $params['page'] : 1;
                     
@@ -119,6 +126,15 @@
                             // Recuperer le proprietaire de l'appartement
                             $modeleUsagers = $this->getDAO("Usagers");
                             $data['proprietaire'] = $modeleUsagers->obtenir_par_id($data['appartement']->getId_userProprio());
+                            
+                            if (isset($_COOKIE['arrivee'])) 
+                            {
+                                $data['arrivee'] = $_COOKIE['arrivee'];
+                            }
+                            if (isset($_COOKIE['depart'])) 
+                            {
+                                $data['depart'] = $_COOKIE['depart'];
+                            }
                             
                             // Affichage du detail d'un appartement
     						$this->afficheVue("header",$data);

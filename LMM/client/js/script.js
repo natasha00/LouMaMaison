@@ -1009,7 +1009,7 @@ window.onload=function(){
 
         $(".rateyo-readonly-widg").rateYo({
 
-          rating: 1,
+          rating: 0,
           numStars: 5,
           precision: 0,
           minValue: 1,
