@@ -1043,7 +1043,7 @@
             $data['tab_quartier'] = $modeleApts->getQuartiers();
             $data['tab_typeApt'] = $modeleApts->getTypesApt();
             // affichage du formulaire d'inscription d'un appartement avec tableau de data rempli
-            $this->afficheVue("afficheInscriptionApt", $data);
+            $this->afficheVue("AfficheInscriptionApt", $data);
         }
 
         /**

@@ -686,12 +686,31 @@ $(document).ready(function() {
         }
     }
 
-// boucler dans le tableau des adresses et les placer sur la carte.
-     window.onload=function() {    
+
+     window.onload=function() { 
+         
+     // boucler dans le tableau des adresses et les placer sur la carte.    
         $("div.appart").each(function(){
             var miniature = $('<div class="miniature">').append($(this).html());
             placerSureCarte($(this).attr('name'), miniature.html());
         });
+         
+       /* fonction pour selectionner un nombre d'étoiles pour la recherche par note*/  
+        $(function () {
+
+        $(".rateyo").rateYo();
+
+        $(".rateyo-readonly-widg").rateYo({
+
+          rating: 0,
+          numStars: 5,
+          precision: 0,
+          minValue: 1,
+          maxValue: 10
+        }).on("rateyo.change", function (e, data) {
+            $('#laNote').val(data.rating);
+        });
+  });
      
      }
      
@@ -995,24 +1014,4 @@ function CalculerdonneePaiement(idLocation){
         alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
       }
     });
-}
-
-/* fonction pour selectionner un nombre d'étoiles pour la recherche par note*/
-
-window.onload=function(){
-  $(function () {
-
-        $(".rateyo").rateYo();
-
-        $(".rateyo-readonly-widg").rateYo({
-
-          rating: 0,
-          numStars: 5,
-          precision: 0,
-          minValue: 1,
-          maxValue: 10
-        }).on("rateyo.change", function (e, data) {
-            $('#laNote').val(data.rating);
-        });
-  });
 }

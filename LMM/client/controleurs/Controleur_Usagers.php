@@ -153,7 +153,6 @@
 
                     // case d'affichage le profil du client 
                     case "afficheUsager" :
-
                         $flag = false;
                         if(isset($params["idUsager"]) && !empty($params["idUsager"]))
                         {  
@@ -395,7 +394,7 @@
 						$data['communication'] = $modeleUsagers->getModeCommunication();
 						if($data) {
                             $this->afficheVue("header", $data);
-							$this->afficheVue("afficheInscriptionUsager", $data);
+							$this->afficheVue("AfficheInscriptionUsager", $data);
                             $this->afficheVue('footer');
 						}
 						break;
@@ -553,7 +552,7 @@
 			if($data) {
 				// affichage du formulaire d'inscription avec tout le data
 				$this->afficheVue("header", $data);	
-				$this->afficheVue("afficheInscriptionUsager", $data);		
+				$this->afficheVue("AfficheInscriptionUsager", $data);		
 			}
 		}
         
