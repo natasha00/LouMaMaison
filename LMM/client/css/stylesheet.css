@@ -151,14 +151,19 @@ h6, .filtre_usager a.nav-link{
 input.slider {
     width: 100%;
 }
-#inputFile, .file {
-    width: 138px;
-    height: 30px;
+#inputFile, .inputFile {
+    width: 200px;
+    height: 36px;
     display: block;
     overflow: hidden;
-/*    
-    background: url(btn-choose-file.gif) 0 0 no-repeat;
-    cursor: pointer;    */
+   
+    background-color: #014B88;
+    cursor: pointer;   
+}
+.file, #file {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 /* --------------------------------------------------- vue Ajout Image  */
@@ -395,6 +400,20 @@ td[name='contenuMessage']{
     color: #0275d8;
     font-weight: 700;
     border-bottom: 1px solid #0275d8;
+}
+.btn-primary {
+    background-color: #014B88;
+}
+.btn-orange {
+    margin-right: 16px;
+}
+.panel-image {
+    position: relative;
+}
+.btn-plusTard {
+    position: absolute;
+    top: 15px;
+    right: 20px;
 }
 
 /* --------------------------------------------------- panels   */

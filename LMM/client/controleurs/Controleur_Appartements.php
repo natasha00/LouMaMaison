@@ -755,6 +755,7 @@
                                     $data['idApt'] = $dernier_idApt;
                                     $this->afficheVue("header");
                                     $this->afficheVue("AjoutImage", $data);
+                                    $this->afficheVue("footer");
                                 }
                                 // si modification reussie
                                 else if(isset($modifApt)) {
