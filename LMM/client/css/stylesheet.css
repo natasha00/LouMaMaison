@@ -243,6 +243,10 @@ input.slider {
     color: grey;
 }
 
+.profilResume{
+    background: #eae8e8;
+    padding: 2em;
+}
 /* --------------------------------------------------- Modal */
 
 .modal-header, .modal-footer {  
