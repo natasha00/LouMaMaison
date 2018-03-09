@@ -260,7 +260,7 @@
                                         </div>
 
                                         <div class="text-right">
-                                            <input  type="submit" value="Upload" class="submit" />
+                                            <input  type="submit" value="Sauvegarder" class="submit" />
                                         </div>
                                     </div>
                                 </div>
