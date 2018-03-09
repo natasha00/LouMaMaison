@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 09, 2018 at 03:41 AM
+-- Generation Time: Mar 09, 2018 at 04:39 PM
 -- Server version: 5.6.35
 -- PHP Version: 7.1.8
 
@@ -154,19 +154,14 @@ CREATE TABLE `location` (
 --
 
 INSERT INTO `location` (`id`, `dateDebut`, `dateFin`, `valideParPrestataire`, `validePaiement`, `id_userClient`, `id_appartement`, `nbPersonnes`, `refuse`, `idDispo`) VALUES
-(33, '2018-03-20', '2018-03-24', 0, 0, 'yul', 15, 3, 0, 43),
-(34, '2018-03-22', '2018-03-23', 0, 0, 'Nouveau00', 15, 2, 0, 43),
-(36, '2018-03-17', '2018-03-22', 0, 0, 'yul', 15, 2, 0, 43),
-(37, '2018-03-13', '2018-03-13', 0, 0, 'yul', 16, 1, 0, 49),
-(38, '2018-03-23', '2018-03-26', 0, 0, 'nat', 15, 3, 0, 43),
 (39, '2018-03-06', '2018-03-07', 1, 1, 'salim', 15, 1, 0, 43),
-(40, '2018-03-25', '2018-03-27', 0, 0, 'renaud', 15, 2, 0, 43),
-(43, '2018-03-17', '2018-03-20', 1, 0, 'renaud', 15, 2, 0, 43),
-(44, '2018-03-24', '2018-03-30', 0, 0, 'salim', 15, 1, 0, 43),
-(45, '2018-03-20', '2018-03-26', 0, 0, 'Nouveau00', 15, 1, 0, 43),
-(46, '2018-03-18', '2018-03-24', 0, 0, 'salim', 15, 2, 0, 43),
-(47, '2018-03-20', '2018-03-24', 0, 0, 'yul', 15, 2, 0, 43),
-(48, '2018-03-05', '2018-03-07', 1, 1, 'yul', 18, 2, 0, 25);
+(48, '2018-03-05', '2018-03-07', 1, 1, 'yul', 18, 2, 0, 25),
+(49, '2018-03-12', '2018-03-15', 0, 0, 'yul', 15, 3, 0, 43),
+(50, '2018-03-11', '2018-03-14', 0, 0, 'yul', 16, 2, 0, 49),
+(51, '2018-03-14', '2018-03-17', 0, 0, 'yul', 17, 4, 0, 52),
+(52, '2018-03-12', '2018-03-15', 0, 0, 'nat', 15, 2, 0, 43),
+(53, '2018-03-18', '2018-03-21', 0, 0, 'nat', 17, 2, 0, 52),
+(54, '2018-03-18', '2018-03-20', 0, 0, 'salim', 15, 3, 0, 43);
 
 -- --------------------------------------------------------
 
@@ -188,38 +183,20 @@ CREATE TABLE `message` (
 --
 
 INSERT INTO `message` (`id`, `titre`, `sujet`, `dateHeure`, `id_userEmetteur`, `archive`) VALUES
-(1, '1111111', '1111111', '2018-03-01 00:00:00', 'nat', 0),
-(2, '222222222222222', '222222222222222', '2018-03-09 00:00:00', 'Nouveau00', 0),
-(29, 're: 1111111', 'zzzzzzzzzz', '2018-03-02 14:39:27', 'salim', 1),
-(30, 're: 1111111', 'wwwwwwwwwww', '2018-03-02 14:41:58', 'salim', 1),
-(31, 're: 1111111', '22222222222222222222', '2018-03-02 14:42:25', 'salim', 1),
-(32, 'rrrrrrrrrrrrrr', '333333333', '2018-03-02 14:43:14', 'salim', 0),
-(33, 'sadaddd', 'rrrrrrrrrrrrrrrrrrr', '2018-03-02 14:46:13', 'salim', 1),
-(35, 'rien', 'rienssssssssss', '2018-03-02 20:00:18', 'salim', 0),
-(39, 'gggggg', 'rrrrrggggg', '2018-03-03 01:26:03', 'salim', 1),
-(40, 're: re: 1111111', 'ssssssssssssssssssssssssss', '2018-03-03 01:26:32', 'salim', 1),
-(41, 're: sadaddd', 'assssssssssss', '2018-03-03 01:27:08', 'salim', 1),
-(42, 're: re: 1111111', 'hhhhhhhhhhhh', '2018-03-03 01:40:25', 'salim', 1),
-(43, '54', 'asssasas', '2018-03-03 01:40:53', 'salim', 1),
-(44, 'trien', 'trien', '2018-03-03 01:51:58', 'salim', 0),
-(45, 'sadaddd', 'rhrfhfh', '2018-03-03 02:03:56', 'salim', 0),
-(46, 'rrrrrrrrrrrrrr', 'sfsfsfsfsfsf', '2018-03-03 02:05:48', 'salim', 0),
-(47, 'dgdgdg', 'dgdgdgdgdg', '2018-03-03 02:07:18', 'salim', 0),
-(48, 'rrrrrrrrrrrrrr', 'cxvsxvxvxv', '2018-03-03 02:08:02', 'salim', 0),
-(49, 'teeeest', 'teessst', '2018-03-03 11:16:21', 'salim', 0),
-(50, 'salut', 'salut le terrien', '2018-03-03 11:25:43', 'salim', 0),
-(51, 'test de pull', 'lalala', '2018-03-03 23:43:27', 'salim', 0),
-(52, 'lol', 'tout est brise', '2018-03-03 23:47:53', 'yul', 1),
-(53, 'allo Renaud', 'test', '2018-03-03 23:52:31', 'yul', 0),
-(54, 'test de message', 'allo', '2018-03-03 23:54:30', 'renaud', 0),
-(55, 'test de formulaire de reponse', 'test', '2018-03-04 00:05:10', 'renaud', 0),
-(56, 'Approbation de location', 'Votre demande de location est approuvée par le proprietaire.<br> <p class=\'nav-link\' id=\'mesReservations\'>Veuillez consulter ce lien pour payer et finaliser la transaction</p>', '2018-03-08 13:23:34', 'renaud', 0),
-(57, 'test de message', 'de yuliya ', '2018-03-08 16:38:44', 'nat', 0),
-(58, 'Accusé reception', 'Nous avons enregistré votre demande de location pour la période du: 2018-03-15 au 2018-03-17 pour 2 personnes.<br> Le proprietaire va vous donner ou non son approbation dans les heures qui suiveront.<br><p class=\'nav-link\' id=\'mesReservations\'>Veuillez consulter ce lien pour suivre l\'évolution de votre demande</p>', '2018-03-08 18:18:46', 'salim', 0),
-(59, 'Demande de location', 'Vous venez de recevoir une demande de réservation pour un de vos appartements. <br><p class=\'nav-link\' id=\'demandesReservations\'>Veuillez consulter ce lien pour l\'approuver</p>', '2018-03-08 18:18:46', 'salim', 0),
-(60, 'test de jeudi', 'lololo', '2018-03-08 18:45:09', 'salim', 0),
-(61, 'Approbation de location', 'Votre demande de location est approuvée par le proprietaire.<br> <p class=\'nav-link\' id=\'mesReservations\'>Veuillez consulter ce lien pour payer et finaliser la transaction</p>', '2018-03-08 18:57:24', 'nat', 0),
-(62, 'Approbation de location', 'Votre demande de location est approuvée par le proprietaire.<br> <p class=\'nav-link\' id=\'mesReservations\'>Veuillez consulter ce lien pour payer et finaliser la transaction</p>', '2018-03-08 19:52:01', 'renaud', 0);
+(63, 'Le weekend qui vient', 'C\'est quoi tes plans?', '2018-03-09 10:14:38', 'nat', 0),
+(64, 're: Le weekend qui vient', 'Dormir! :-)', '2018-03-09 10:16:17', 'yul', 0),
+(65, 'Accusé reception', 'Nous avons enregistré votre demande de location pour la période du: 2018-03-12 au 2018-03-15 pour 3 personnes.<br> Le proprietaire va vous donner ou non son approbation dans les heures qui suiveront.<br><p class=\'nav-link\' id=\'mesReservations\'>Veuillez consulter ce lien pour suivre l\'évolution de votre demande</p>', '2018-03-09 10:18:30', 'yul', 0),
+(66, 'Demande de location', 'Vous venez de recevoir une demande de réservation pour un de vos appartements. <br><p class=\'nav-link\' id=\'demandesReservations\'>Veuillez consulter ce lien pour l\'approuver</p>', '2018-03-09 10:18:30', 'yul', 0),
+(67, 'Accusé reception', 'Nous avons enregistré votre demande de location pour la période du: 2018-03-11 au 2018-03-14 pour 2 personnes.<br> Le proprietaire va vous donner ou non son approbation dans les heures qui suiveront.<br><p class=\'nav-link\' id=\'mesReservations\'>Veuillez consulter ce lien pour suivre l\'évolution de votre demande</p>', '2018-03-09 10:19:14', 'yul', 0),
+(68, 'Demande de location', 'Vous venez de recevoir une demande de réservation pour un de vos appartements. <br><p class=\'nav-link\' id=\'demandesReservations\'>Veuillez consulter ce lien pour l\'approuver</p>', '2018-03-09 10:19:14', 'yul', 0),
+(69, 'Accusé reception', 'Nous avons enregistré votre demande de location pour la période du: 2018-03-14 au 2018-03-17 pour 4 personnes.<br> Le proprietaire va vous donner ou non son approbation dans les heures qui suiveront.<br><p class=\'nav-link\' id=\'mesReservations\'>Veuillez consulter ce lien pour suivre l\'évolution de votre demande</p>', '2018-03-09 10:19:39', 'yul', 0),
+(70, 'Demande de location', 'Vous venez de recevoir une demande de réservation pour un de vos appartements. <br><p class=\'nav-link\' id=\'demandesReservations\'>Veuillez consulter ce lien pour l\'approuver</p>', '2018-03-09 10:19:39', 'yul', 0),
+(71, 'Accusé reception', 'Nous avons enregistré votre demande de location pour la période du: 2018-03-12 au 2018-03-15 pour 2 personnes.<br> Le proprietaire va vous donner ou non son approbation dans les heures qui suiveront.<br><p class=\'nav-link\' id=\'mesReservations\'>Veuillez consulter ce lien pour suivre l\'évolution de votre demande</p>', '2018-03-09 10:20:41', 'nat', 0),
+(72, 'Demande de location', 'Vous venez de recevoir une demande de réservation pour un de vos appartements. <br><p class=\'nav-link\' id=\'demandesReservations\'>Veuillez consulter ce lien pour l\'approuver</p>', '2018-03-09 10:20:41', 'nat', 0),
+(73, 'Accusé reception', 'Nous avons enregistré votre demande de location pour la période du: 2018-03-18 au 2018-03-21 pour 2 personnes.<br> Le proprietaire va vous donner ou non son approbation dans les heures qui suiveront.<br><p class=\'nav-link\' id=\'mesReservations\'>Veuillez consulter ce lien pour suivre l\'évolution de votre demande</p>', '2018-03-09 10:21:02', 'nat', 0),
+(74, 'Demande de location', 'Vous venez de recevoir une demande de réservation pour un de vos appartements. <br><p class=\'nav-link\' id=\'demandesReservations\'>Veuillez consulter ce lien pour l\'approuver</p>', '2018-03-09 10:21:02', 'nat', 0),
+(75, 'Accusé reception', 'Nous avons enregistré votre demande de location pour la période du: 2018-03-18 au 2018-03-20 pour 3 personnes.<br> Le proprietaire va vous donner ou non son approbation dans les heures qui suiveront.<br><p class=\'nav-link\' id=\'mesReservations\'>Veuillez consulter ce lien pour suivre l\'évolution de votre demande</p>', '2018-03-09 10:23:54', 'salim', 0),
+(76, 'Demande de location', 'Vous venez de recevoir une demande de réservation pour un de vos appartements. <br><p class=\'nav-link\' id=\'demandesReservations\'>Veuillez consulter ce lien pour l\'approuver</p>', '2018-03-09 10:23:54', 'salim', 0);
 
 -- --------------------------------------------------------
 
@@ -239,38 +216,20 @@ CREATE TABLE `message_user` (
 --
 
 INSERT INTO `message_user` (`id_message`, `id_username`, `statut`, `supprime`) VALUES
-(1, 'salim', 0, 0),
-(2, 'salim', 0, 0),
-(29, 'salim', 1, 1),
-(30, 'salim', 0, 1),
-(31, 'salim', 1, 0),
-(32, 'salim', 1, 1),
-(33, 'salim', 1, 0),
-(35, 'yul', 1, 0),
-(39, 'yul', 0, 0),
-(40, 'salim', 0, 1),
-(41, 'salim', 1, 0),
-(42, 'salim', 1, 0),
-(43, 'yul', 0, 0),
-(44, 'yul', 0, 0),
-(45, 'yul', 0, 0),
-(46, 'yul', 1, 0),
-(47, 'yul', 1, 0),
-(48, 'yul', 1, 1),
-(49, 'renaud', 0, 0),
-(50, 'renaud', 0, 0),
-(51, 'yul', 1, 1),
-(52, 'salim', 0, 0),
-(53, 'renaud', 1, 0),
-(54, 'salim', 1, 0),
-(55, 'yul', 1, 0),
-(56, 'yul', 0, 0),
-(57, 'renaud', 1, 0),
-(58, 'salim', 0, 0),
-(59, 'nat', 0, 0),
-(60, 'nat', 1, 0),
-(61, 'salim', 0, 0),
-(62, 'yul', 0, 0);
+(63, 'yul', 1, 0),
+(64, 'nat', 0, 0),
+(65, 'yul', 0, 0),
+(66, 'renaud', 0, 0),
+(67, 'yul', 0, 0),
+(68, 'nat', 0, 0),
+(69, 'yul', 0, 0),
+(70, 'salim', 0, 0),
+(71, 'nat', 0, 0),
+(72, 'renaud', 0, 0),
+(73, 'nat', 0, 0),
+(74, 'salim', 0, 0),
+(75, 'salim', 0, 0),
+(76, 'renaud', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -429,9 +388,7 @@ INSERT INTO `role_user` (`id_username`, `id_nomRole`) VALUES
 ('nat', 3),
 ('renaud', 3),
 ('salim', 3),
-('YuliyaTest', 3),
 ('nat', 4),
-('Nouveau00', 4),
 ('renaud', 4),
 ('salim', 4),
 ('yul', 4);
@@ -487,10 +444,10 @@ CREATE TABLE `usager` (
 --
 
 INSERT INTO `usager` (`username`, `nom`, `prenom`, `photo`, `adresse`, `telephone`, `motDePasse`, `valideParAdmin`, `banni`, `id_moyenComm`, `coor_moyenComm`, `id_modePaiement`, `id_adminBan`, `id_adminValid`) VALUES
-('nat', 'Massicotte', 'Natasha', './images/profilN.png', 'Monreal', '514 888 8888', '12345', 1, 0, 3, 'coordonnée MC', 3, 'salim', 'salim'),
+('nat', 'Massicotte', 'Natasha', './images/nat_0_profil_usager.png', 'Montreal', '514 888 8888', '12345', 1, 0, 3, 'coordonnée MC', 3, 'salim', 'salim'),
 ('Nouveau00', 'no', 'no', 'profil.jpg', '32 rue du Moulin, Mtl', '222-222-2222', 'AAAAaaaa', 1, 0, 1, 'skss', 3, 'salim', 'salim'),
-('renaud', 'renaud', 'Renaud', './images/renaud_0_profilR.png', 'renaud', '514 888 5555', '12345', 1, 0, 1, 'coordonnée MC', 1, 'salim', 'salim'),
-('salim', 'salim', 'Salim', './images/profilS.png', 'Montreal', '514 055 5050', '12345', 1, 0, 4, 'coordonnée MC', 2, NULL, NULL),
+('renaud', 'renaud', 'Renaud', './images/renaud_0_profil_usager.png', 'renaud', '514 888 5555', '12345', 1, 0, 1, 'coordonnée MC', 1, 'salim', 'salim'),
+('salim', 'salim', 'Salim', './images/salim_0_profil_usager.png', 'Montreal', '514 055 5050', '12345', 1, 0, 3, 'coordonnée MC', 3, NULL, NULL),
 ('yul', 'Romodina', 'Yuliya', './images/0_yul_3a.jpg', 'Montreal', '514 827 0000', '12345AAA', 1, 0, 1, 'coordonnée MC', 1, 'salim', 'salim'),
 ('YuliyaTest', 'fgf', 'fgfgf', './images/profil.jpg', 'fgfgfg', '514 888 5555', '12345AAA', 0, 0, 2, 'grtrtrt', NULL, NULL, NULL);
 
@@ -624,12 +581,12 @@ ALTER TABLE `evaluation`
 -- AUTO_INCREMENT for table `location`
 --
 ALTER TABLE `location`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 --
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 --
 -- AUTO_INCREMENT for table `paiement`
 --
