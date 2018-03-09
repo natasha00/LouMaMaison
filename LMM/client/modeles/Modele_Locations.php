@@ -48,19 +48,19 @@
 		* @param   		<int>   $dateNow : date d'aujourd'hui
 		* @return    	<...> 	Résultat de la requête SQL
 		*/
-        public function afficheLocation($dateNow, $idProprio) 
-        {
-            $query = "SELECT * FROM " . $this->getTableName() . " l 
+		public function afficheLocation($dateNow, $idProprio) 
+		{
+			$query = "SELECT * FROM " . $this->getTableName() . " l 
 					JOIN 
 					(SELECT (id) as idApt, photoPrincipale, titre, id_userProprio FROM appartement) a ON l.id_appartement = a.idApt
 					JOIN usager u ON l.id_userClient = u.username
 					WHERE dateFin >= ? AND id_userProprio = ?
 					ORDER BY titre, dateDebut ASC";
-            $donnees = array($dateNow, $idProprio);
-            $resultat = $this->requete($query, $donnees);
-            $resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
+			$donnees = array($dateNow, $idProprio);
+			$resultat = $this->requete($query, $donnees);
+			$resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
 			return $resultat->fetchAll();
-        }
+		}
 		
 		/**  
 		* @brief     	Afficher des locations du client avec status différents
@@ -68,19 +68,19 @@
 		* @param   		<date>   	$dateNow  		date d'aujourd'hui
 		* @return    	<...> 		Résultat de la requête SQL
 		*/
-        public function afficheLocationClient($dateNow, $idClient) 
-        {
-            $query = "SELECT * FROM " . $this->getTableName() . " l 
+		public function afficheLocationClient($dateNow, $idClient) 
+		{
+			$query = "SELECT * FROM " . $this->getTableName() . " l 
 					JOIN 
 					(SELECT (id) as idApt, photoPrincipale, titre, id_userProprio FROM appartement) a ON l.id_appartement = a.idApt
 					JOIN usager u ON l.id_userClient = u.username
 					WHERE dateDebut >= ? AND id_userClient=?
 					ORDER BY titre, dateDebut ASC";
-            $donnees = array($dateNow, $idClient);
-            $resultat = $this->requete($query, $donnees);
-            $resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
+			$donnees = array($dateNow, $idClient);
+			$resultat = $this->requete($query, $donnees);
+			$resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
 			return $resultat->fetchAll();
-        }
+		}
 		
 		/**  
 		* @brief     	Afficher des locations par son ID
@@ -88,21 +88,21 @@
 		* @param   		<date>   	$dateNow  		date d'aujourd'hui
 		* @return    	<...> 		Résultat de la requête SQL
 		*/
-        public function obtenir_location_par_id($dateNow, $idLocation) 
-        {
-            $query = "SELECT * FROM " . $this->getTableName() . " l 
+		public function obtenir_location_par_id($dateNow, $idLocation) 
+		{
+			$query = "SELECT * FROM " . $this->getTableName() . " l 
 					JOIN 
 					(SELECT (id) as idApt, photoPrincipale, titre, id_userProprio, montantParJour FROM appartement) a ON l.id_appartement = a.idApt
 					JOIN usager u ON l.id_userClient = u.username
 					WHERE dateDebut >= ? AND id = ?";
-            $donnees = array($dateNow, $idLocation);
-            $resultat = $this->requete($query, $donnees);
-            $resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
+			$donnees = array($dateNow, $idLocation);
+			$resultat = $this->requete($query, $donnees);
+			$resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
 			$lLocation = $resultat->fetch();
 			return $lLocation;
-        }
+		}
 		 
-        /**
+		/**
 		* @brief		Fonction pour changer le status de validation
 		* @details		Permet de changer le statut des champs: validePaiement et 	valideParPrestataire
 		* @param 		<VAR>		$leChamp		Le champ à modifier (validePaiement / valideParPrestataire)
@@ -142,8 +142,8 @@
 			$resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
 			return $resultat->fetchAll();
 		}
-        
-        /**  
+		
+		/**  
 		* @brief     	Chercher location d'un appartement par l'id de disponibilite
 		* @details   	
 		* @param   		<int>    $idDispo  	id de disponibilite     	
@@ -156,7 +156,7 @@
 			$query = "SELECT * FROM " . $this->getTableName() . " WHERE idDispo = ? AND id != ?";
 			$data = array($idDispo, $id);
 			$resultat = $this->requete($query, $data);
-            $resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
+			$resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
 			return $resultat->fetchAll();
 		}
 		
@@ -165,27 +165,27 @@
 		* @param   		<int>   	$id_location 		Identifiant de la table location
 		* @return    	<boolean>   ( resultat de la requete ou false )
 		*/
-        public function supprimeLocation($id_location) 
-        {
-            return $this->supprimer($id_location);
-        }
-        
-        /**  
+		public function supprimeLocation($id_location) 
+		{
+			return $this->supprimer($id_location);
+		}
+		
+		/**  
 		* @brief     	Afficher historique d'un client
 		* @param   		<int>   	$id_user		
 		* @return    	<boolean>   ( resultat de la requete ou false )
 		*/
-        public function afficherVoyages($id_user)
-        {
-            $query = "SELECT * FROM " . $this->getTableName() . " l 
-				    JOIN 
+		public function afficherVoyages($id_user)
+		{
+			$query = "SELECT * FROM " . $this->getTableName() . " l 
+					JOIN 
 					(SELECT (id) as idApt, photoPrincipale, titre, id_userProprio, rue, noCivique, noApt, ville FROM appartement) a ON l.id_appartement = a.idApt 
-                    WHERE valideParPrestataire = 1 AND validePaiement = 1 AND dateFin < DATE(NOW()) AND id_userClient = ?";
-            $donnees = array($id_user);
-            $resultat = $this->requete($query, $donnees);
-            $resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
+					WHERE valideParPrestataire = 1 AND validePaiement = 1 AND dateFin < DATE(NOW()) AND id_userClient = ?";
+			$donnees = array($id_user);
+			$resultat = $this->requete($query, $donnees);
+			$resultat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Location');
 			return $resultat->fetchAll();
-        }
-        
+		}
+		
 	}
 ?>
