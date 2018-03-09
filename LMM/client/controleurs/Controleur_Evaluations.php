@@ -98,36 +98,31 @@
 										// sinon message a l'usager
 										else {
 											$data['erreurs'] = "Votre évaluation n'a pu être sauvegardée";
-											echo "ici2";
-											echo "<script>window.location='./index.php?Usagers&action=afficheUsager&message_e=" . $data['erreurs'] . "&idUsager=" . $_SESSION['username'] . "'</script>";
+											echo '<script>window.location="./index.php?Usagers&action=afficheUsager&message_e=' . $data['erreurs']  . '&idUsager=' . $_SESSION['username'] . '"</script>';
 										}
 									}
 									// si l'usager n'a pas loue ce logement
 									else {
 										$data['erreurs'] = "Vous n'avez pas les permissions requises pour évaluer ce logement";
-										echo "ici3";
-										echo "<script>window.location='./index.php?Usagers&action=afficheUsager&message_e=" . $data['erreurs'] . "&idUsager=" . $_SESSION['username'] . "'</script>";
+										echo '<script>window.location="./index.php?Usagers&action=afficheUsager&message_e=' . $data['erreurs']  . '&idUsager=' . $_SESSION['username'] . '"</script>';
 									}
 								}
 								// si l'usager n'a pas loue ce logement
 								else {
 										$data['erreurs'] = "Vous n'avez pas les permissions requises pour évaluer ce logement";
-										echo "ici4";
-										echo "<script>window.location='./index.php?Usagers&action=afficheUsager&message_e=" . $data['erreurs'] . "&idUsager=" . $_SESSION['username'] . "'</script>";
+										echo '<script>window.location="./index.php?Usagers&action=afficheUsager&message_e=' . $data['erreurs']  . '&idUsager=' . $_SESSION['username'] . '"</script>';
 								}
                         	}
                         	// si  le champ d'evaluation n'a pas ete rempli
                         	else {
-                        		$message = 'Paramètres d&apos;évaluation invalides, veuillez vérifier vos informations';
-								
-								echo "<script>window.location='./index.php?Usagers&action=afficheUsager&message=" . $message  . "&idUsager=" . $_SESSION['username'] . "'</script>";
+                        		$data['erreurs'] = "Paramètres d'évaluation invalides, veuillez vérifier vos informations";								
+								echo '<script>window.location="./index.php?Usagers&action=afficheUsager&message_e=' . $data['erreurs']  . '&idUsager=' . $_SESSION['username'] . '"</script>';
                         	}	
                         }
                         // si on n'a pas les champs requis
                         else {
                         	$data['erreurs'] = 'Veuillez vous assurer de remplir les champs requis pour votre évaluation';
-                    		echo "ici6";
-                    		echo "<script>window.location='./index.php?Usagers&action=afficheUsager&message_e=" . $data['erreurs'] . "&idUsager=" . $_SESSION['username'] . "'</script>";
+							echo '<script>window.location="./index.php?Usagers&action=afficheUsager&message_e=' . $data['erreurs']  . '&idUsager=' . $_SESSION['username'] . '"</script>';
                         }
 						break;
 

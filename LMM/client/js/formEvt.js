@@ -145,6 +145,7 @@ $(document).ready(function() {
     */
     $('#option').on('change', function(e) {
 
+        console.log("allo");
         // serialisation de tous les inputs et ajout de la 'string' serialisee au formulaire (input hidden) 
         var options = $("#formApt input[type='checkbox']" ).serialize();
         var valeurOptions = $('#optionsSerialises').val(options);
