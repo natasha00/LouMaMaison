@@ -434,10 +434,14 @@ $(document).ready(function() {
         var divButton = divImg.appendChild(button);     */
         var hr = document.createElement('hr');
             divPrincipale.appendChild(hr);
+        var label = addElement("label", ["btn", "btn-primary", "inputFile"]);
+        var divLabel = divPrincipale.appendChild(label);
+        var labelTexte = addText(label, 'Sélectionner une image');
+            label.appendChild(labelTexte);
         // creation de l'input de type file      
         var input = addElement("input", ["file"]);
-            setAttributes(input, { "type" : "file", "name" : "file[]", "id" :  tabFiles.length });
-        var divInput = divPrincipale.appendChild(input); 
+            setAttributes(input, { "type" : "file", "name" : "file[]", "id" :  tabFiles.length }); 
+        var divInput = divLabel.appendChild(input); 
         // appel de la fonction qui affichera
         ajouterNouvelleImage(tabFiles.length);
     }));
