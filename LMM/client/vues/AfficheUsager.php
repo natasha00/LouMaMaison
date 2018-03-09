@@ -44,7 +44,10 @@
                 <div id="photoProfilUsager" class="col-md-5">
 
                     <div id="photo"> <img src="<?=$data["usager"]->getPhoto() ?>" class="aptPhotoProprio rounded-circle img-fluid img"> </div>
-                    <h5><?=$data["usager"]->getNom() ?> <?=$data["usager"]->getPrenom() ?>&nbsp; <small>&#64;<?=$data["usager"]->getUsername();?></small></h5>
+                    <input type="hidden" name="idUser" value="<?=$_SESSION["username"]?>">
+					<h5 id="userNom">		
+						<?=$data["usager"]->getUsername();?>
+					</h5>
                 </div>
 				<!--On affiche nom d'usager pour les gens pas connectés ou bannis ou non activés, ainsi que
 					pour les connectés; 
