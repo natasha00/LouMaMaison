@@ -12,7 +12,8 @@
 </div> <!-- fin div row -->
 
 <div class="resultat">
-    <div class="row">        
+    <div class="row"> 
+        <div class="text-warning"><?=isset($data['demande']) ? $data['demande'] : ""?></div>
         <?php 
 		if($data["appartement"]){
 			foreach($data["appartement"] as $appartement)

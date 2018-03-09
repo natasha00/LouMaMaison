@@ -684,7 +684,16 @@
                         {
                             $modeleLocation = $this->getDAO("Locations");
                             $data['appartement'] = $modeleLocation->afficherVoyages($params['id_userClient']);
-                            $this->afficheVue("AfficheVoyages", $data); 
+                            if($data['appartement'])
+                            {
+                                $this->afficheVue("AfficheVoyages", $data); 
+                            }
+                            else 
+                            {
+                                $data['demande'] = "Vous n'avez pas de voyages. Planifiez-un maintenant!";
+                                $this->afficheVue("AfficheVoyages", $data); 
+                            }
+                            
                         }
                     break;
 
