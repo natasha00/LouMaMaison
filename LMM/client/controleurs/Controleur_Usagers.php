@@ -153,7 +153,6 @@
 
                     // case d'affichage le profil du client 
                     case "afficheUsager" :
-
                         $flag = false;
                         if(isset($params["idUsager"]) && !empty($params["idUsager"]))
                         {  
